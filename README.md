@@ -1,4 +1,3 @@
-# Oracle_pdb-II_20252SEN228_MULISA-Israel-Jakes
 # Assignment II: Oracle Pluggable Database Management Report
 
 Pluggable Database (PDB): a portable, self-contained logical database that functions as a regular standalone database to applications but operates under a shared Container Database (CDB).
@@ -29,12 +28,12 @@ This assignment demonstrates the administrative lifecycle of a Pluggable Databas
 The target pluggable container database was successfully provisioned using isolated directory definitions mapped directly within the runtime environment engine.
 
 ```sql
-CREATE PLUGGABLE DATABASE jakes_db_20252SEN228
+CREATE PLUGGABLE DATABASE ja_db_20252SEN228
 ADMIN USER jakes_plsqlauca_20252SEN241 IDENTIFIED BY "israel290" 
 FILE_NAME_CONVERT=('pdbseed','jakes_db_20252SEN228');
 
-ALTER PLUGGABLE DATABASE jakes_db_20252SEN228 OPEN;
-ALTER PLUGGABLE DATABASE jakes_db_20252SEN228 SAVE STATE; (For saving the user even when the docker restarts).
+ALTER PLUGGABLE DATABASE ja_db_20252SEN228 OPEN;
+ALTER PLUGGABLE DATABASE ja_db_20252SEN228 SAVE STATE; (For saving the user even when the docker restarts).
 ```
 
 ### Task B: Environment Status Verification
@@ -49,8 +48,8 @@ SELECT name, open_mode FROM v$pdbs WHERE name = 'JAKES_DB_20252SEN228';
 The database infrastructure was intentionally torn down and wiped cleanly from the container runtime system using structural dropping protocols:
 
 ```sql
-ALTER PLUGGABLE DATABASE jakes_db_20252SEN228 CLOSE IMMEDIATE;
-DROP PLUGGABLE DATABASE jakes_db_20252SEN228 INCLUDING DATAFILES;
+ALTER PLUGGABLE DATABASE ja_db_20252SEN228 CLOSE IMMEDIATE;
+DROP PLUGGABLE DATABASE ja_db_20252SEN228 INCLUDING DATAFILES;
 ```
 
 ---
@@ -61,11 +60,12 @@ DROP PLUGGABLE DATABASE jakes_db_20252SEN228 INCLUDING DATAFILES;
 ---
 
 ## 5. Integrity Statement
+
 I declare on my honor that the database configurations, query outputs, and log documentation shown in this submission represent my own original technical administration work completed individually on my environment workstation.
 ---
 
 ## 6. Required Submission Details Block
 *   **Repository Link:** https://github.com/Jakes-37/Oracle_pdb-II_20252SEN228_MULISA-Israel-Jakes
-*   **PDB Name Created:** `JAKES_DB_20252SEN228`
+*   **PDB Name Created:** `JA_DB_20252SEN228`
 *   **Issues Encountered:** Yes
 
