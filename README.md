@@ -62,6 +62,7 @@ DROP PLUGGABLE DATABASE ja_db_20252SEN228 INCLUDING DATAFILES;
 ## 5. Integrity Statement
 
 I declare on my honor that the database configurations, query outputs, and log documentation shown in this submission represent my own original technical administration work completed individually on my environment workstation.
+
 ---
 
 ## 6. Required Submission Details Block
